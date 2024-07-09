@@ -115,7 +115,7 @@ export default function AssignmentEditor() {
         <br />  
        <hr className="split-line" />
        
-       <div className="button-container">
+       <div style={{ textAlign: 'right' }} className="button-container">
          <button className="cancel-button">Cancel</button>
          <button className="save-button">Save</button>
        </div>
