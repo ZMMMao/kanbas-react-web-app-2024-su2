@@ -6,7 +6,9 @@ import Lab3 from "./Lab3";
 export default function Labs() {
   return (
     <div>
-      <h1>Zuowei Mao</h1>
+      <h2>Zuowei Mao<br />
+          24_SU_2<br />
+         CS5610, Sec 01</h2>
       <h1>Labs</h1>
       <TOC />
       <Routes>
