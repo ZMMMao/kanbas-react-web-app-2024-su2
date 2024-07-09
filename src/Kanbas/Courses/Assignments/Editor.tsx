@@ -113,14 +113,13 @@ export default function AssignmentEditor() {
         </td>
         </tr>
         <br />  
-        </table>
-       
        <hr className="split-line" />
        
        <div className="button-container">
          <button className="cancel-button">Cancel</button>
          <button className="save-button">Save</button>
        </div>
+       </table>
      </div>
   );}
   
