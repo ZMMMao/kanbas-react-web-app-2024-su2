@@ -1,0 +1,15 @@
+#wd-courses-navigation {
+    position: fixed;
+    top: 100px; 
+    left: 120px;
+    width: 130px; 
+    height: calc(100vh - 100px); 
+    overflow-y: auto; 
+}
+
+#wd-courses-navigation > .list-group-item.active {
+    color: black;
+    background-color: white;
+    border-left: 3px solid black !important;
+  }
+  
