@@ -1,126 +1,126 @@
 export default function AssignmentEditor() {
     return (
       <div id="wd-assignments-editor">
-        <label htmlFor="wd-name"><h3>Assignment Name</h3></label><br />
-        <input id="wd-name" value="A1 - ENV + HTML" /><br /><br />
-        <textarea id="wd-description">
-          The assignment is available online Submit a link to the landing page of your Web application running on Netlify. 
-          The Landing page should include the following: Your full name and section Links to each of the lab assisgnments Llink to the Kanbas application Links to all relevant source code repositories. 
-          The Kanbas application should include a link to navigate back to the landing page.
-        </textarea>
-        <br />
-        <table>
-          <tr>
-            <td align="right" valign="top">
-            <br />
-              <label htmlFor="wd-points">Points</label>
-            </td>
-            <td>
-            <br />
-              <input id="wd-points" value={100} />
-            </td>
-          </tr>
-          <tr>
-            <td align="right" valign="top">
-            <br />
-              <label htmlFor="wd-group">Assignment Group</label>
-            </td>
-            <td>
-            <br />
-            <select id="wd-group">
-            <option value="ASSIGNMENT">ASSIGNMENTS</option>
-            <option value="EXAMS">EXAMS</option>
+        <div id="wd-assignment">
+            <h3>Assignment Name</h3><br />
+            <div className="mb-3">
+                <input type="assignment" className="form-control"
+                id="wd-assignment" value="A1" placeholder="A1"/>
+            </div><br />
+            <div className="mb-3">
+                <textarea className="form-control" id="textarea1" rows={4}>
+                    The assignment is available online.
+                    
+                    Submit a link to the landing page of your Web application running on Netlify. 
+                    
+                    The Landing page should include the following: 
+                    - Your full name and section 
+                    - Links to each of the lab assignments 
+                    - Link to the Kanbas application 
+                    - Links to all relevant source code repositories. 
+
+                    The Kanbas application should include a link to navigate back to the landing page.
+                </textarea>
+            </div>
+        </div>
+        <div id="assignmentPoint">
+          <div className="row mb-3">
+            <label htmlFor="points" className="col-sm-2 col-form-label">Points</label>
+            <div className="col-sm-10">
+            <input type="number" className="col-sm-10 form-control" id="points" value="100" />
+            </div>
+          </div><br />
+          <div className="row mb-3">
+            <label htmlFor="assignmentGroup" className="col-sm-2 col-form-label">Assignment Group</label>
+            <div className="col-sm-10">
+            <select className="form-control" id="assignmentGroup">
+              <option>ASSIGNMENTS</option>
+              <option>EXAMS</option>
+              <option>QUIZZES</option>
             </select>
-            </td>
-          </tr>
-          <tr>
-            <td align="right" valign="top">
-            <br />
-              <label htmlFor="wd-display-grade-as">Display Grade as</label>
-            </td>
-            <td>
-            <br />
-            <select id="wd-display-grade-as">
-            <option value="Percentage">Percentage</option>
-            <option value="Point">Point</option>
+            </div>
+          </div><br />
+          <div className="mb-3 row">
+            <label htmlFor="displayGradeAs" className="col-sm-2 col-form-label">Display Grade as</label>
+            <div className="col-sm-10">
+            <select className="form-select" id="displayGradeAs">
+              <option>Percentage</option>
+              <option>Point</option>
             </select>
-            </td>
-          </tr>
-          <tr>
-            <td align="right" valign="top">
-            <br />
-              <label htmlFor="wd-submission-type">Submission Type</label>
-            </td>
-            <td>
-            <br />
-            <select id="wd-submission-type">
-            <option value="Online">Online</option>
-            <option value="In-person">In-person</option>
+            </div>
+          </div><br />
+          <div className="mb-3 row">
+          <label htmlFor="submissionType" className="col-sm-2 col-form-label">Submission Type</label>
+          <div className="col-sm-10">
+            <select className="form-control" id="submissionType">
+              <option>Online</option>
+              <option>In-Person</option>
             </select>
-            </td>
-          </tr>
-          <br />
-        </table>
-        <table style={{ float: 'right' }}>
-          <tr>
-          <td>
-            <label>Online Entry Options</label><br/>
+          </div>
+        </div>
 
-            <input type="checkbox" name="check-genre" id="wd-text-entry"/>
-            <label htmlFor="wd-text-entry">Text Entry</label><br/>
+        <div className="mb-3 row">
+          <div className="col-sm-2"></div>
+          <div className="col-sm-10">
+            <label className="form-label">Online Entry Options</label>
+            <div className="form-check">
+              <input className="form-check-input" type="checkbox" id="textEntry" />
+              <label className="form-check-label" htmlFor="textEntry">Text Entry</label>
+            </div>
+            <div className="form-check">
+              <input className="form-check-input" type="checkbox" id="websiteURL" defaultChecked />
+              <label className="form-check-label" htmlFor="websiteURL">Website URL</label>
+            </div>
+            <div className="form-check">
+              <input className="form-check-input" type="checkbox" id="mediaRecordings" />
+              <label className="form-check-label" htmlFor="mediaRecordings">Media Recordings</label>
+            </div>
+            <div className="form-check">
+              <input className="form-check-input" type="checkbox" id="studentAnnotation" />
+              <label className="form-check-label" htmlFor="studentAnnotation">Student Annotation</label>
+            </div>
+            <div className="form-check">
+              <input className="form-check-input" type="checkbox" id="fileUploads" />
+              <label className="form-check-label" htmlFor="fileUploads">File Uploads</label>
+            </div>
+          </div>
+        </div>
 
-            <input type="checkbox" name="check-genre" id="wd-website-url"/>
-            <label htmlFor="wd-website-url">Website URL</label><br/>
+        <div className="mb-3 row">
+            <label htmlFor="assignTo" className="col-sm-2 form-label">Assign</label>
+            <div className="col-sm-10">
+            <label htmlFor="assignTo" className="col-sm-2 form-label">Assign to</label>
+            <div className="col-md-6">
+            <input type="text" className="form-control" id="assignTo" value="Everyone" />
+            </div>
 
-            <input type="checkbox" name="check-genre" id="wd-media-recordings"/>
-            <label htmlFor="wd-media-recordings">Media Recordings</label><br/>
-
-            <input type="checkbox" name="check-genre" id="wd-student-annotation"/>
-            <label htmlFor="wd-student-annotation">Student Annotation</label><br/>
-
-            <input type="checkbox" name="check-genre" id="wd-file-upload"/>
-            <label htmlFor="wd-file-upload">File Uploads</label><br/>
-            </td>
-          </tr>
+              <div className="col-md-6">
+                <label htmlFor="dueDate" className="form-label">Due</label>
+                <input type="datetime-local" className="form-control" id="dueDate" value="2024-05-13T23:59" />
+              </div>
+            
+            <div className="row">
+              <div className="col-md-6">
+                <label htmlFor="availableFrom" className="form-label">Available from</label>
+                <input type="datetime-local" className="form-control" id="availableFrom" value="2024-05-06T00:00" />
+              </div>
+              <div className="col-md-6">
+                <label htmlFor="until" className="form-label">Until</label>
+                <input type="datetime-local" className="form-control" id="until" value="2024-05-13T23:59" />
+              </div>
+              </div>
+              </div>
+          </div>
+        </div><br />
+        <div className="mb-3">
+        <button id="wd-add-module-btn" className="btn btn-lg btn-danger me-1 float-end">
+          Save
+        </button>
+        <button id="wd-add-module-btn" className="btn btn-lg btn-secondary me-1 float-end">
+          Cancel
+        </button>
+        </div>
         <br />
-        <br />
-          <tr>
-            <td align="left" valign="top">
-              <label htmlFor="wd-assign-to">Assign</label>
-              <label htmlFor="wd-assign-to"> Assign to</label>
-              <br />
-              <input id="wd-assign-to" value="Everyone" /><br />
-            </td>
-          </tr>
-          <br />
-          <label htmlFor="wd-due-date	"> Due</label><br />
-        <input type="date"
-            id="wd-due-date"
-            value="2024-05-31"/><br/>
-            <br />
-        <tr>  
-        <td>
-        <label htmlFor="wd-available-from"> Available from</label><br />
-        <input type="date"
-            id="wd-available-from"
-            value="2024-05-06"/>
-        </td>
-        <td>
-        <label htmlFor="wd-available-until"> Until</label><br />
-        <input type="date"
-            id="wd-available-until"
-            value="2024-05-20"/><br/>
-        </td>
-        </tr>
-        <br />  
-       <hr className="split-line" />
-       
-       <div style={{ textAlign: 'right' }} className="button-container">
-         <button className="cancel-button">Cancel</button>
-         <button className="save-button">Save</button>
-       </div>
-       </table>
-     </div>
-  );}
-  
-  
+    </div>      
+  );
+  }
