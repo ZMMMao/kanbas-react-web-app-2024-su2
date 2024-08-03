@@ -1,7 +1,15 @@
 import { FaPlus, FaMagnifyingGlass } from "react-icons/fa6";
 import React from "react";
+import { useNavigate, useParams } from "react-router-dom";
 
 export default function AssignmentControls() {
+  const navigate = useNavigate();
+  const { cid } = useParams();
+
+  const handleAddAssignment = () => {
+    navigate(`/Kanbas/Courses/${cid}/Assignments/new`);
+  };
+
   const containerStyle: React.CSSProperties = {
     display: 'flex',
     justifyContent: 'space-between',
@@ -56,13 +64,17 @@ export default function AssignmentControls() {
         </div>
       </div>
       <div style={rightContainerStyle}>
-        <button id="wd-add-module-btn" className="btn btn-lg btn-danger me-1">
-          <FaPlus className="position-relative me-2" style={{ bottom: "1px" }} />
-          Assignment
-        </button>
         <button id="wd-add-module-btn" className="btn btn-lg btn-secondary me-1">
           <FaPlus className="position-relative me-2" style={{ bottom: "1px" }} />
           Group
+        </button>
+        <button
+          id="wd-add-assignment-btn"
+          className="btn btn-lg btn-danger me-1"
+          onClick={handleAddAssignment}
+        >
+          <FaPlus className="position-relative me-2" style={{ bottom: "1px" }} />
+          Assignment
         </button>
       </div>
     </div>
