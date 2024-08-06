@@ -33,6 +33,7 @@ export default function WorkingWithObjectsAsynchronously() {
         Update Title
       </button>
       <pre>{JSON.stringify(assignment, null, 2)}</pre>
+      
       <hr />
     </div>
   );
